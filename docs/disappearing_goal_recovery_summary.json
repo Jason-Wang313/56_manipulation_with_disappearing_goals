@@ -1,0 +1,20 @@
+{
+  "paper_number": 56,
+  "slug": "manipulation_with_disappearing_goals",
+  "literature_rows": 1266,
+  "relevant_prior_subset": 80,
+  "episodes": 5400,
+  "best_policy": "persistent_goal_proxy",
+  "long_occlusion_success": {
+    "visible_only": 0.9566666666666667,
+    "last_seen_belief": 0.8716666666666667,
+    "persistent_goal_proxy": 1.0
+  },
+  "artifacts": [
+    "paper/main.tex",
+    "paper/figures/disappearing_goal_summary.png",
+    "docs/disappearing_goal_results.csv",
+    "docs/relevant_prior_subset.csv",
+    "build/disappearing_goal_episode_traces.csv"
+  ]
+}

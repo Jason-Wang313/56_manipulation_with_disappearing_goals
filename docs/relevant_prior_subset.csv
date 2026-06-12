@@ -1,0 +1,81 @@
+title,year,venue,doi,score
+A Hierarchical Vision-Language and Reinforcement Learning Framework for Robotic Task and Motion Planning in Collaborative Manipulation,2026,IEEE Robotics and Automation Letters,10.1109/lra.2025.3629984,4
+VLAG: Graph-Based Planning for Vision-Language-Action Models in Long Horizon Manipulation Tasks,2025,Volume 3A: 51st Design Automation Conference (DAC),10.1115/detc2025-169527,4
+A Task and Motion Planning Framework for Partially Observable Household Manipulation Scenes,2025,Advanced Intelligent Systems,10.1002/aisy.202400897,4
+Task and Motion Planning for Humanoid Loco-Manipulation,2025,2025 IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids),10.1109/humanoids65713.2025.11203197,3
+Integrated Task and Motion Planning for Multi-Robot Manipulation in Industry and Service Automation,2025,IEEE Access,10.1109/access.2025.3610811,3
+Object-Centric Kinodynamic Planning for Nonprehensile Robot Rearrangement Manipulation,2025,IEEE Transactions on Robotics,10.1109/tro.2025.3613532,3
+DiMSam: Diffusion Models as Samplers for Task and Motion Planning under Partial Observability,2024,2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),10.1109/iros58592.2024.10802746,3
+Extending Task and Motion Planning with Feasibility Prediction: Towards Multi-Robot Manipulation Planning of Realistic Objects,2024,2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),10.1109/iros58592.2024.10802307,3
+Symbolic State Space Optimization for Long Horizon Mobile Manipulation Planning,2023,2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),10.1109/iros55552.2023.10342224,3
+State Representation Learning for Task and Motion Planning in Robot Manipulation,2023,2023 IEEE International Conference on Development and Learning (ICDL),10.1109/icdl55364.2023.10364419,3
+Long-Horizon Manipulation of Unknown Objects via Task and Motion Planning with Estimated Affordances,2022,2022 International Conference on Robotics and Automation (ICRA),10.1109/icra46639.2022.9812057,3
+Visually Grounded Task and Motion Planning for Mobile Manipulation,2022,2022 International Conference on Robotics and Automation (ICRA),10.1109/icra46639.2022.9812055,3
+Neural network-enhanced optimal motion planning for robot manipulation under remote center of motion,2022,"Tactile Sensing, Skill Learning, and Robotic Dexterous Manipulation",10.1016/b978-0-32-390445-2.00022-2,3
+Utilization of Image/Force/Tactile Sensor Data for Object-Shape-Oriented Manipulation: Wiping Objects With Turning Back Motions and Occlusion,2022,IEEE Robotics and Automation Letters,10.1109/lra.2021.3136657,3
+Manipulation Planning From Demonstration Via Goal-Conditioned Prior Action Primitive Decomposition and Alignment,2022,IEEE Robotics and Automation Letters,10.1109/lra.2021.3140127,3
+Continuous Optimization-Based Task and Motion Planning with Signal Temporal Logic Specifications for Sequential Manipulation,2021,2021 IEEE International Conference on Robotics and Automation (ICRA),10.1109/icra48506.2021.9561209,3
+Tree Search-based Task and Motion Planning with Prehensile and Non-prehensile Manipulation for Obstacle Rearrangement in Clutter,2021,2021 IEEE International Conference on Robotics and Automation (ICRA),10.1109/icra48506.2021.9561895,3
+Combined Task and Motion Planning under Partial Observability: An Optimization-Based Approach,2019,2019 International Conference on Robotics and Automation (ICRA),10.1109/icra.2019.8793260,3
+Learning from Experience in Manipulation Planning: Setting the Right Goals,2016,Springer Tracts in Advanced Robotics,10.1007/978-3-319-29363-9_18,3
+Combined Task and Motion Planning for Mobile Manipulation,2010,Proceedings of the International Conference on Automated Planning and Scheduling,10.1609/icaps.v20i1.13436,3
+The Atmosphere Attack: Postural Manipulation and the Hidden Threat in Agentic AI,2026,,10.2139/ssrn.6494918,2
+A multi-scale spectroscopic approach unveiling hidden manipulation and restoration treatments in mineralogical specimens,2026,,10.2139/ssrn.6619824,2
+Hidden Costs of Ethical Fashion: Sustainable Development Goals and Garment Worker Exploitation in Bangladesh,2026,Sustainable Development,10.1002/sd.71025,2
+Hidden Costs of Climate Goals: A Life Cycle Perspective on the Net-Zero Path of the Swiss Energy Sector,2026,,10.2139/ssrn.5953177,2
+Hidden Costs of Climate Goals: A Life Cycle Perspective on the Net-Zero Path of the Swiss Energy Sector,2026,,10.2139/ssrn.5861062,2
+The Hidden Mechanism of Chemical Fertilizer Overuse,2026,Sustainable Development Goals Series,10.1007/978-981-95-4352-6_16,2
+Cockroach gut microbiota as a hidden biodegradation system for plastic waste management towards UN sustainable development goals,2026,Discover Sustainability,10.1007/s43621-026-02687-y,2
+Fostering student voice through artistic amplification: a positive hidden extra curriculum initiative,2026,The Elgar Companion to Management Education and the Sustainable Development Goals,10.4337/9781035337170.00061,2
+HiBAR: A Hidden Backdoor Attack on LLM Recommendation Services via Multi-Turn Dialogue Manipulation,2026,"ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",10.1109/icassp55912.2026.11462090,2
+Physics-guided world models for long horizon electromagnetic dynamics under partial observability,2026,Machine Learning in Photonics II,10.1117/12.3100755,2
+Motion Planning-Augmented Deep Reinforcement Learning for Long-Horizon Robotic Mobile Manipulation Tasks,2026,Proceedings of the 2026 10th International Conference on Control Engineering and Artificial Intelligence,10.1145/3793928.3793938,2
+Optimal Planning and Scheduling for Satellite Servicing Under Partial Observability,2026,AIAA SCITECH 2026 Forum,10.2514/6.2026-2634,2
+Neuro-Symbolic Task Planning for Tabletop Manipulation under Perceptual Uncertainty,2026,,10.2139/ssrn.6555972,2
+ADAPT: A Modular Architecture for LLMDriven Robotic Task and Motion Planning with Memory-Guided Execution,2026,,10.2139/ssrn.6098520,2
+Condition-based maintenance planning for K-out-of-N systems under partial observability,2026,Reliability Engineering &amp; System Safety,10.1016/j.ress.2025.111943,2
+SPOC: Safety-Aware Planning Under Partial Observability and Physical Constraints,2026,"ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",10.1109/icassp55912.2026.11463090,2
+Manipulation Goal State Representation Based On The Foresight Diffusion Network,2026,,10.2139/ssrn.5998906,2
+A Scalable Generative Robotic System for Foresighted 3D Goal State Prediction and Object Manipulation,2026,,10.2139/ssrn.6479481,2
+Goal Choices and Planning: Distinct Expectancy and Value Effects in Two Goal Processes,2026,SSRN Electronic Journal,10.2139/ssrn.5908802,2
+Career Planning and Goal Setting,2026,Women in Surgery,10.1007/978-3-032-10971-2_7,2
+Securing 3D Printing: Understanding the Hidden Risks of G-Code Manipulation in Additive Manufacturing,2025,International Journal of Science and Research (IJSR),10.21275/sr25313021311,2
+Consumer Manipulation With Artificial Intelligence: Dark Patterns and Hidden Techniques,2025,"Consumer, Marketing, AI: Dark Sides and Ethics",10.58830/ozgur.pub710.c3029,2
+The Hidden Threat: Analyzing Trust Manipulation Attacks in Trust Management Systems for Vehicular Networks,2025,"2025 International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA)",10.1109/acdsa65407.2025.11166636,2
+Manipulation in Negotiations: The Hidden Costs of the “Easy” Victory,2025,Journal of Research and Innovation for Sustainable Society,10.33727/jriss.2025.1.22:212-221,2
+The Hidden Cost of High Aspirations: Examining the Stress-Enhancing Effect of Motivational Goals Using Vignette Methodology,2025,"European Journal of Investigation in Health, Psychology and Education",10.3390/ejihpe15070128,2
+Uncovering Hidden Competing Goals to Empower Personal Transformation,2025,Law for Professionals,10.1007/978-3-031-98653-6_10,2
+The Hidden Rules of Win Rate Manipulation: A Study on Algorithmic Discrimination in the Matching Mechanism of MOBA Games—Taking Honor of Kings as an Example,2025,Frontiers in Artificial Intelligence Research,10.71465/fair248,2
+Politics and the Hidden Nature of Power,2025,Sustainable Development Goals Series,10.1007/978-3-031-85564-1_9,2
+Exposing the Hidden Layer: Software Repositories in the Service of Seo Manipulation,2025,2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE),10.1109/icse55347.2025.00147,2
+Grasping “hidden” values: exploring affective climate change goals in the geography curricula of Spain and The Netherlands,2025,International Research in Geographical and Environmental Education,10.1080/10382046.2025.2559803,2
+Efficient wave manipulation with sparse control under partial observability,2025,The Journal of the Acoustical Society of America,10.1121/10.0040181,2
+Intelligent redundant manipulation for long-horizon operations with multiple goal-conditioned hierarchical learning,2025,Advanced Robotics,10.1080/01691864.2025.2475295,2
+Dual-LLM Hierarchical Task Planning and Skill Grounding for Mobile Manipulation in Long-Horizon Restroom Cleaning,2025,IEEE Access,10.1109/access.2025.3627503,2
+Task and Motion Planning,2025,"Acting, Planning, and Learning",10.1017/9781009579346.030,2
+Motion and Manipulation Actions,2025,"Acting, Planning, and Learning",10.1017/9781009579346.029,2
+From Classical Planning to Learning-Based Task and Motion Planning: A Survey of Intelligent Planning Systems,2025,,10.36227/techrxiv.176153407.77398309/v1,2
+Curvature-Constrained Motion Planning and Control for Traffic Cone Manipulation Robot,2025,"Proceedings of the 22nd International Conference on Informatics in Control, Automation and Robotics",10.5220/0013720700003982,2
+Motion and Manipulation Models in Robotics,2025,"Acting, Planning, and Learning",10.1017/9781009579346.028,2
+RoboDexVLM: Visual Language Model-Enabled Task Planning and Motion Control for Dexterous Robot Manipulation,2025,2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),10.1109/iros60139.2025.11247714,2
+On Shallow Planning Under Partial Observability,2025,Proceedings of the AAAI Conference on Artificial Intelligence,10.1609/aaai.v39i25.34860,2
+A Simulation Framework to Study Partial Observability in Production Planning and Control with Reinforcement Learning,2025,Simulation in Produktion und Logistik 2025 21. ASIM-Fachtagung,10.25368/2025.243,2
+Whole-body Motion Planning and Safety-Critical Control for Aerial Manipulation,2025,,10.2139/ssrn.5954633,2
+Motion Planning and Nonlinear Model Predictive Control for Dual-Arm Collaborative Manipulation,2025,2025 China Automation Congress (CAC),10.1109/cac67268.2025.11487301,2
+Breaking the Hierarchy: Taxonomies and Survey on Multi-robot Integrated Task and Motion Planning,2025,,10.36227/techrxiv.173933261.11143776/v2,2
+Hierarchical Temporal Logic Task and Motion Planning for Multi-Robot Systems,2025,Robotics: Science and Systems XXI,10.15607/rss.2025.xxi.099,2
+Robot Task and Motion Planning,2025,AI Robotics,10.1201/9781032695266-10,2
+Breaking the Hierarchy: Taxonomies and Survey on Multi-robot Integrated Task and Motion Planning,2025,,10.36227/techrxiv.173933261.11143776/v1,2
+A multi-user multi-robot multi-goal multi-device human-robot interaction manipulation benchmark,2025,Frontiers in Robotics and AI,10.3389/frobt.2025.1528754,2
+Goal-Conditioned Model Simplification for 1-D and 2-D Deformable Object Manipulation,2025,IEEE Transactions on Robotics,10.1109/tro.2025.3577052,2
+"The goal is not to manipulate, but to measure manipulation!",2025,üha,10.32739/uha.id.62754,2
+Goal-Driven Robotic Pushing Manipulation Under Uncertain Object Properties,2025,2025 IEEE International Conference on Robotics and Automation (ICRA),10.1109/icra55743.2025.11127379,2
+Proposing Hierarchical Goal-Conditioned Policy Planning in Multi-Goal Reinforcement Learning,2025,Proceedings of the 17th International Conference on Agents and Artificial Intelligence,10.5220/0013238900003890,2
+The Goal Setting and Planning Framework - B Planning&amp;nbsp;,2025,SSRN Electronic Journal,10.2139/ssrn.5594653,2
+"Perceiving, Monitoring, and Goal Reasoning",2025,"Acting, Planning, and Learning",10.1017/9781009579346.034,2
+Global planning – milestone planning,2025,Goal Directed Project Management,10.4324/9781003604303-7,2
+Dmoa-Rf: An Intelligent Model of Career Planning Goal System for Lifelong Education,2025,,10.2139/ssrn.5352446,2
+Collision-Inclusive Manipulation Planning for Occluded Object Grasping via Compliant Robot Motions,2025,IEEE Robotics and Automation Letters,10.1109/lra.2025.3592060,2
+Symbolic Manipulation Planning With Discovered Object and Relational Predicates,2025,IEEE Robotics and Automation Letters,10.1109/lra.2025.3527338,2
+Hidden Politics in the UN Sustainable Development Goals,2024,,10.3362/9781788534581,2
+Hidden in Plain Sight How Interior Furnishings Management Can Help Los Alamos National Laboratory Meet the United States Department of Energy's Sustainability Goals [Slides],2024,,10.2172/2335736,2
