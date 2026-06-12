@@ -1,0 +1,138 @@
+\documentclass{article}
+
+\usepackage{iclr2026_conference,times}
+\input{math_commands.tex}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+
+\title{Manipulation With Disappearing Goals:\\Planning Over Persistent Goal Proxies}
+
+\author{Anonymous Authors}
+
+\newcommand{\method}{\textsc{ProxyPlan}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Goal-conditioned manipulation assumes that the goal remains observable, queryable, or at least representable as a stable state. Many real tasks violate that assumption: a target cup moves behind a hand, a receptacle is occluded by the manipulated object, a drawer interior disappears after grasp approach, or a language-specified referent leaves the camera view. This paper isolates the disappearing-goal problem and argues that the planning object should be a persistent goal proxy rather than the currently visible goal state. A 1,264-record robotics literature sweep suggests that prior work covers partial observability, active perception, occlusion-robust perception, task-and-motion planning, and object-centric manipulation, but usually leaves goal identity as an implicit belief-state detail. We formalize goal proxies as task-intent carriers with identity, affordance, and geometric anchors. In a deterministic toy manipulation study with 5,400 episodes, persistent proxies improve long-occlusion success from 0.872 for last-seen belief tracking to 1.000, while reducing identity swaps by 0.575. The contribution is a mechanism claim: when the physical referent disappears, manipulation should plan over a proxy that survives visibility loss and can be explicitly disambiguated.
+\end{abstract}
+
+\section{Introduction}
+
+Robots are often asked to manipulate toward a goal that is no longer visible by the time the decisive action is taken. A mobile manipulator may see the shelf slot before its arm blocks the camera. A bimanual system may cover the fastening point while aligning a part. A tabletop policy may receive a language instruction such as ``place this in the left cup,'' then lose sight of the cup behind the object in its gripper. Treating these cases as ordinary goal-conditioned control hides the central difficulty: the robot must preserve the identity of a goal referent after the referent stops being an observation.
+
+This paper studies manipulation with disappearing goals. The thesis is narrow and operational:
+\begin{quote}
+When the physical goal referent disappears from view, the planner should optimize over a persistent goal proxy, not over the last visible goal observation alone.
+\end{quote}
+The proxy is not just a probability distribution over scene state. It is a planning object that stores why this hidden entity is the goal, how it can be acted on, where its geometry is anchored, and when its identity has become ambiguous enough to require re-acquisition.
+
+The distinction matters because many recoveries that look perceptual are actually goal-identity failures. A robot can localize an occluded object and still manipulate toward the wrong referent if it has not maintained a stable task binding. Conversely, a robot with a weak geometric estimate can continue a useful plan if it preserves the proxy identity and knows when to pause for disambiguation.
+
+\section{Literature Boundary}
+
+The recovery run reused the attempt-two literature sweep, which contains 1,264 candidate records in \texttt{docs/related\_work\_matrix.csv}. A filtered subset of 80 records emphasized manipulation planning, hidden-object reaching, occlusion, active perception, tactile feedback, object-centric representations, task-and-motion planning, and long-horizon vision-language-action systems. That sweep makes several weaker claims non-novel. It is not new to represent uncertainty, plan under partial observability, search actively for information, use memory for hidden objects, or build object-centric manipulation policies.
+
+The remaining boundary is the object of planning. POMDP and belief-space methods usually represent uncertainty over world state. Occlusion-robust perception methods reconstruct what cannot be seen. Active-perception systems move sensors to reduce uncertainty. Long-horizon task-and-motion planners maintain symbolic goals. These are all compatible with our claim, but they do not force the manipulation controller to carry a goal-specific proxy whose identity, affordance, and re-binding rules survive disappearance.
+
+\section{Persistent Goal Proxies}
+
+Let $g$ be a goal referent that is visible at time $t_0$ and unobservable over an interval $t_1:t_2$. A visible-goal policy plans against an observation $o_t(g)$. A last-seen belief policy plans against an estimated state $\hat{s}_t(g)$. \method{} instead constructs a proxy
+\begin{equation}
+    z_g = \left(i_g, a_g, x_g, u_g, \rho_g\right),
+\end{equation}
+where $i_g$ is an identity binding, $a_g$ is an affordance description, $x_g$ is a geometric anchor, $u_g$ is uncertainty about the proxy, and $\rho_g$ is a re-binding rule that decides when new observations are compatible with the original goal. The action selector optimizes
+\begin{equation}
+    \pi(a_t \mid s_t, z_g) = \arg\max_a \; Q(s_t, a, z_g) - \lambda u_g - \eta \mathbb{1}[\rho_g \text{ rejects all observations}],
+\end{equation}
+so uncertainty can trigger re-acquisition rather than silent goal switching.
+
+The mechanism is intentionally simple. A proxy may be implemented by a factor graph, a learned object token, a symbolic task frame, or a differentiable memory slot. What matters is the contract: the planner consumes the proxy as the goal carrier, updates it during occlusion, and exposes a failure mode when the proxy can no longer be disambiguated.
+
+\section{Toy Study}
+
+We use a one-dimensional manipulation diagnostic to test the mechanism before claiming any benchmark result. Each episode samples a robot position, a true goal, and a nearby distractor. The goal is visible briefly, disappears for a short, medium, or long interval, and then may reappear with noisy observations. Three policies are compared:
+\begin{itemize}
+    \item \textbf{Visible only} moves toward the goal only while it is observed.
+    \item \textbf{Last-seen belief} moves toward a remembered coordinate that drifts and can bind to a distractor.
+    \item \textbf{Persistent proxy} maintains an identity-gated proxy and continues acting during disappearance while tracking uncertainty.
+\end{itemize}
+The experiment has 5,400 deterministic episodes, stored in \texttt{build/disappearing\_goal\_episode\_traces.csv}, with aggregate results in \texttt{docs/disappearing\_goal\_results.csv}.
+
+\begin{table}[t]
+\centering
+\caption{Aggregate success and identity failures. Higher success is better; lower error and swaps are better.}
+\label{tab:results}
+\begin{tabular}{llrrr}
+\toprule
+Policy & Occlusion & Success & Final error & Identity swaps \\
+\midrule
+Visible only & short & 1.000 & 0.010 & 0.000 \\
+Visible only & long & 0.957 & 0.021 & 0.000 \\
+Last-seen belief & short & 0.988 & 0.009 & 0.240 \\
+Last-seen belief & long & 0.872 & 0.042 & 0.575 \\
+Persistent proxy & short & 1.000 & 0.007 & 0.000 \\
+Persistent proxy & medium & 1.000 & 0.007 & 0.000 \\
+Persistent proxy & long & 1.000 & 0.007 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.86\linewidth]{figures/disappearing_goal_summary.png}
+\caption{The planning object matters most as the disappearance interval grows. Persistent proxies continue to act toward the task referent while exposing identity uncertainty.}
+\label{fig:summary}
+\end{figure}
+
+The diagnostic supports the mechanism claim. Under long disappearance, \method{} reaches 1.000 success compared with 0.872 for last-seen belief and 0.957 for visible-only control. The gain is not merely smoother control; identity swaps fall from 0.575 to 0.000. This is the failure mode the formulation is meant to expose.
+
+\section{Reviewer-Hostile Interpretation}
+
+The strongest objection is that this is just partial observability. We agree that disappearing goals induce partial observability, but the proxy formulation adds a stricter interface: the controller must carry task identity and affordance through the occlusion, not only a latent scene state. Another objection is that the toy study is synthetic. That is true; it is a mechanism diagnostic, not a real-robot benchmark. Its purpose is to make the hidden assumption testable: if a method cannot preserve a proxy in this toy setting, it is unlikely to preserve task intent when a manipulator self-occludes a target in the real world.
+
+\section{Conclusion}
+
+Manipulation with disappearing goals is a small problem with a sharp consequence. When the referent vanishes, the robot either preserves task identity or it silently changes the task. Persistent goal proxies make that choice explicit. They provide a planning object that survives visibility loss, supports continued action, and advertises when re-acquisition is necessary.
+
+\begin{thebibliography}{9}
+
+\bibitem[Kaelbling et~al.(1998)]{kaelbling1998planning}
+L. P. Kaelbling, M. L. Littman, and A. R. Cassandra.
+\newblock Planning and acting in partially observable stochastic domains.
+\newblock \emph{Artificial Intelligence}, 1998.
+
+\bibitem[Bohg et~al.(2014)]{bohg2017data}
+J. Bohg, A. Morales, T. Asfour, and D. Kragic.
+\newblock Data-driven grasp synthesis: A survey.
+\newblock \emph{IEEE Transactions on Robotics}, 2014.
+
+\bibitem[Kemp et~al.(2007)]{kemp2007challenges}
+C. C. Kemp, A. Edsinger, and E. Torres-Jara.
+\newblock Challenges for robot manipulation in human environments.
+\newblock \emph{IEEE Robotics and Automation Magazine}, 2007.
+
+\bibitem[Zeng et~al.(2020)]{zeng2020transporter}
+A. Zeng, P. Florence, J. Tompson, S. Welker, J. Chien, M. Attarian, T. Armstrong, I. Krasin, D. Duong, V. Sindhwani, and J. Lee.
+\newblock Transporter networks: Rearranging the visual world for robotic manipulation.
+\newblock \emph{Conference on Robot Learning}, 2020.
+
+\bibitem[Shridhar et~al.(2022)]{shridhar2022cliport}
+M. Shridhar, L. Manuelli, and D. Fox.
+\newblock CLIPort: What and where pathways for robotic manipulation.
+\newblock \emph{Conference on Robot Learning}, 2022.
+
+\bibitem[Garrett et~al.(2021)]{garrett2021integrated}
+C. R. Garrett, T. Lozano-Perez, and L. P. Kaelbling.
+\newblock Integrated task and motion planning.
+\newblock \emph{Annual Review of Control, Robotics, and Autonomous Systems}, 2021.
+
+\end{thebibliography}
+
+\end{document}
