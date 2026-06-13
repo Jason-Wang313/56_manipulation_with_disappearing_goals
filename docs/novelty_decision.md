@@ -1,6 +1,7 @@
 # Novelty Decision
 
-- Chosen thesis: plan over persistent goal proxies when the physical goal referent disappears from view.
-- Rejected weaker framing: add uncertainty to existing manipulation planning.
-- Rejected weaker framing: use a bigger model or better benchmark.
-- Rejected weaker framing: combine active perception with standard goal-conditioned control without changing the planning object.
+Decision after v2 hardening: workshop-only.
+
+Reason: The goal-proxy framing is useful, but the current evidence is synthetic and depends on re-binding reliability. V2 shows loose proxy acceptance can bind to distractors catastrophically.
+
+Novelty boundary: present this as a planning-interface mechanism for goal identity under disappearance, not as a general partial-observability solver.

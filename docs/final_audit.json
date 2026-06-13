@@ -1,0 +1,16 @@
+{
+  "paper": 56,
+  "decision": "workshop-only",
+  "canonical_pdf": "C:/Users/wangz/Downloads/56.pdf",
+  "key_result": "Loose proxy acceptance collapses under close distractors; re-acquisition recovers 0.928 success with 0.072 swaps.",
+  "v2_metrics": {
+    "close_loose_success": 0.094,
+    "close_loose_swap_rate": 0.906,
+    "close_reacquisition_success": 0.928,
+    "close_reacquisition_swap_rate": 0.072,
+    "severe_loose_success": 0.02,
+    "severe_loose_swap_rate": 0.98,
+    "severe_reacquisition_success": 0.821,
+    "severe_reacquisition_swap_rate": 0.179
+  }
+}
