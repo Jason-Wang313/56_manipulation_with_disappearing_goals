@@ -1,0 +1,10 @@
+scenario,policy,episodes,success_rate,mean_final_error,identity_swap_rate,mean_search_steps
+clear_reappearance,last_seen_belief,1000,0.264,0.19987211455583037,0.72,0
+clear_reappearance,loose_proxy_accept,1000,0.651,0.03595573947464444,0.349,0
+clear_reappearance,proxy_with_reacquisition,1000,1.0,0.010548368117930225,0.0,0.389
+close_distractor,last_seen_belief,1000,0.026,0.1521471178783565,0.972,0
+close_distractor,loose_proxy_accept,1000,0.094,0.049852728979354034,0.906,0
+close_distractor,proxy_with_reacquisition,1000,0.928,0.011190650539334466,0.072,2.037
+severe_ambiguity,last_seen_belief,1000,0.003,0.08754425440508126,0.997,0
+severe_ambiguity,loose_proxy_accept,1000,0.02,0.040279047283670426,0.98,0
+severe_ambiguity,proxy_with_reacquisition,1000,0.821,0.010140641812123687,0.179,2.121

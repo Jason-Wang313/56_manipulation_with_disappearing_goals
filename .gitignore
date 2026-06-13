@@ -16,3 +16,5 @@ results/*raw*.jsonl
 results/*cache*.json
 results/*cache*.jsonl
 *.tmp
+paper/main.pdf
+data/build_status.json
