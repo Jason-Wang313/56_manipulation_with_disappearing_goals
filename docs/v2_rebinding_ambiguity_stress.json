@@ -1,6 +1,6 @@
 {
-  "decision": "workshop-only",
-  "reason": "Persistent proxies require calibrated re-binding and re-acquisition; loose proxy acceptance collapses under close distractors.",
+  "decision": "v2_negative_control_not_final",
+  "reason": "Persistent proxies require calibrated re-binding and re-acquisition; loose proxy acceptance collapses under close distractors. This v2 result is retained as a negative control, not the final paper decision.",
   "summary": [
     {
       "scenario": "clear_reappearance",

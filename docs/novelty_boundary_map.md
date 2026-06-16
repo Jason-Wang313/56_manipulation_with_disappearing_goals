@@ -6,12 +6,13 @@
 - Active perception.
 - Occlusion-robust perception.
 - Object memory.
+- Tracking hidden state.
 - Task-and-motion planning.
 
 ## Plausible Contribution
 
-Treat the disappearing goal as a planning-interface problem: the controller consumes a goal proxy with identity, affordance, geometry, uncertainty, and re-binding rules.
+The contribution is the action-facing planning interface: a disappearing goal is represented as a proxy with identity, geometry, affordance, uncertainty, re-binding rules, and re-acquisition policy. The planner consumes that proxy rather than a raw visible state or an unchecked last-seen location.
 
-## V2 Boundary
+## Final Boundary
 
-The proxy is useful only when re-binding and re-acquisition are audited under close distractors and severe ambiguity.
+The full-scale result supports identity-calibrated proxy evaluation across task family, horizon, occlusion, ambiguity, observability, cost, and policy axes. V2 remains a negative control proving that uncalibrated proxy persistence is not enough.

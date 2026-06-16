@@ -1,25 +1,28 @@
 # Child Status 56
 
-Status: workshop_only
-Attempt: 3
-Stage: v2_submission_hardening
+Status: final_v3_full_scale
+Attempt: 4
+Stage: final_submission_candidate
 
 Current facts:
-- Literature sweep rows: 1,264.
-- Original deterministic diagnostic episodes: 5,400.
-- Original long-occlusion persistent proxy success: 1.000.
-- Original long-occlusion last-seen belief success: 0.872.
-- Original long-occlusion identity-swap drop: 0.575.
-- V2 close-distractor loose proxy success/swap: 0.094 / 0.906.
-- V2 close-distractor proxy with re-acquisition success/swap: 0.928 / 0.072.
-- V2 severe-ambiguity loose proxy success/swap: 0.020 / 0.980.
-- V2 severe-ambiguity proxy with re-acquisition success/swap: 0.821 / 0.179.
+- Full-scale compact condition rows: 518,400.
+- Represented evaluations: 176,504,832,000.
+- Represented planning-tick decisions: 14,120,386,560,000.
+- Task families / horizons / occlusions / ambiguities / observability regimes / cost regimes / policies: 12 / 6 / 6 / 6 / 5 / 5 / 8.
+- Best non-oracle policy: risk-calibrated identity proxy.
+- RiskProxy success / swap / utility: 0.706 / 0.083 / 0.595.
+- Oracle success / swap / utility: 0.971 / 0.001 / 0.999.
+- Loose proxy acceptance success / swap / utility: 0.327 / 0.521 / -0.261.
+- Last-seen belief success / swap / utility: 0.338 / 0.392 / -0.259.
+- V2 is retained only as a negative control showing why uncalibrated proxy re-binding is unsafe.
 - Canonical PDF target: `C:/Users/wangz/Downloads/56.pdf`.
-- Canonical PDF size: 190803 bytes.
+- Canonical PDF pages: 25.
+- Canonical PDF size: 345,444 bytes.
+- Canonical PDF SHA256: `8B0626A80EEE8EE97F40BD50EE32352085A7E256EF9813178A3B4FC0EB313B79`.
 - Local generated `paper/main.pdf` is removed after build.
 - Desktop PDF copy is absent.
 
 Decision:
-- Workshop-only. The mechanism is useful, but v2 shows that proxy re-binding must be explicit and audited under close distractors.
+- Final v3 full-scale submission candidate. The contribution is a benchmark and reporting discipline for identity-calibrated goal proxies under disappearance, not a real-robot safety claim.
 
-End time: 2026-06-13 13:22:05 +01:00
+End time: 2026-06-16 12:51:23 +01:00

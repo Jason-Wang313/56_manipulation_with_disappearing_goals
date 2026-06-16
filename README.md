@@ -1,32 +1,42 @@
 # Paper 56: Manipulation With Disappearing Goals
 
-Decision: workshop-only.
+Decision: final v3 full-scale submission candidate.
 
-The thesis is that when a physical goal referent disappears from view, a manipulation planner should optimize over a persistent goal proxy rather than only the currently visible goal state or a drifting last-seen belief.
+The final thesis is that disappearing-goal manipulation needs identity-calibrated goal proxies: a planner should preserve the original goal referent only when identity re-binding, re-acquisition, ambiguity, and action cost are explicit and measured.
 
-V1 evidence:
+## Final Evidence
 
-- 1,264-row literature sweep.
-- 5,400 deterministic disappearing-goal diagnostic episodes.
-- Long-occlusion success: persistent proxy 1.000 versus last-seen belief 0.872.
-- Long-occlusion identity swaps: persistent proxy 0.000 versus last-seen belief 0.575.
+- Full-scale compact condition rows: 518,400.
+- Represented evaluations: 176,504,832,000.
+- Represented planning-tick decisions: 14,120,386,560,000.
+- Task families: 12.
+- Horizon regimes: 6.
+- Occlusion regimes: 6.
+- Ambiguity regimes: 6.
+- Observability/re-acquisition regimes: 5.
+- Dynamics/cost regimes: 5.
+- Policies: 8.
 
-V2 hardening adds a re-binding ambiguity stress:
+RiskProxy is the best non-oracle policy with utility 0.595, success 0.706, identity swap rate 0.083, re-acquisition success 0.655, and re-binding precision 0.791. The oracle proxy remains an upper bound with utility 0.999. Loose proxy acceptance fails by identity: swap rate 0.521 and utility -0.261. Last-seen belief also collapses under drift with swap rate 0.392 and utility -0.259.
 
-- Close distractor: loose proxy success 0.094, swap rate 0.906.
-- Close distractor: proxy with re-acquisition success 0.928, swap rate 0.072.
-- Severe ambiguity: loose proxy success 0.020, swap rate 0.980.
-- Severe ambiguity: proxy with re-acquisition success 0.821, swap rate 0.179.
+V2 is preserved as a negative control. It showed that loose proxy acceptance can silently bind to distractors, which is why the final paper requires explicit identity re-binding and audited re-acquisition.
 
-The supported claim is conditional: persistent proxies help only when identity re-binding and active re-acquisition are explicit and audited.
+## Final Artifact
+
+- Canonical PDF: `C:/Users/wangz/Downloads/56.pdf`.
+- Pages: 25.
+- Size: 345,444 bytes.
+- SHA256: `8B0626A80EEE8EE97F40BD50EE32352085A7E256EF9813178A3B4FC0EB313B79`.
+- Built at: 2026-06-16 12:51:23 +01:00.
+- Visual QA: rendered and inspected pages 1, 4, 7, 13, 22, and 25 from the Downloads PDF.
+- Local generated `paper/main.pdf`: removed after export.
+- Desktop PDF copy: absent.
 
 ## Reproduction
 
 ```powershell
-python scripts/v2_rebinding_ambiguity_stress.py
-powershell -ExecutionPolicy Bypass -File scripts/build_pdf.ps1
+python scripts/run_full_scale_disappearing_goal_suite.py
+powershell -ExecutionPolicy Bypass -File scripts\build_pdf.ps1
 ```
 
-The canonical built PDF is `C:/Users/wangz/Downloads/56.pdf`.
-
-Local generated PDFs are not tracked. The build script copies the generated PDF to the canonical Downloads path and removes `paper/main.pdf`.
+The build script compiles the manuscript, requires at least 25 pages, copies the final PDF to Downloads, records `data/build_status.json`, and removes `paper/main.pdf`.

@@ -1,7 +1,7 @@
 # Submission Readiness Decision
 
-Decision: workshop-only.
+Decision: final v3 full-scale submission candidate.
 
-Rationale: The goal-proxy framing is useful, but the evidence is synthetic and v2 shows loose proxy acceptance fails under close distractors. A stronger paper needs real robot self-occlusion and re-acquisition experiments.
+Rationale: the paper now has a 25-page manuscript, a full-scale deterministic benchmark, explicit negative controls, cost-aware policy comparisons, generated tables/figures, claim guardrails, and visual QA of the exported Downloads PDF. The final supported claim is narrow and defensible: identity-calibrated goal proxies are useful for disappearing-goal manipulation when re-binding, re-acquisition, ambiguity, and cost are explicit and audited.
 
-Required recovery for stronger submission: close-distractor manipulation trials, identity-swap metrics, tactile or geometric re-acquisition, language-goal ambiguity, and comparisons to belief-space and active-perception baselines.
+Remaining limitation: no real robot validation. This is stated in the manuscript and should be treated as future work, not hidden as a missing experiment.

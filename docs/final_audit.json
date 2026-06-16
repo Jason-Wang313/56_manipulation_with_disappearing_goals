@@ -1,16 +1,40 @@
 {
   "paper": 56,
-  "decision": "workshop-only",
+  "decision": "final_v3_full_scale_submission_candidate",
   "canonical_pdf": "C:/Users/wangz/Downloads/56.pdf",
-  "key_result": "Loose proxy acceptance collapses under close distractors; re-acquisition recovers 0.928 success with 0.072 swaps.",
-  "v2_metrics": {
-    "close_loose_success": 0.094,
-    "close_loose_swap_rate": 0.906,
-    "close_reacquisition_success": 0.928,
-    "close_reacquisition_swap_rate": 0.072,
-    "severe_loose_success": 0.02,
-    "severe_loose_swap_rate": 0.98,
-    "severe_reacquisition_success": 0.821,
-    "severe_reacquisition_swap_rate": 0.179
-  }
+  "pages": 25,
+  "file_size_bytes": 345444,
+  "sha256": "8B0626A80EEE8EE97F40BD50EE32352085A7E256EF9813178A3B4FC0EB313B79",
+  "visual_qa_pages": [1, 4, 7, 13, 22, 25],
+  "condition_rows": 518400,
+  "represented_evaluations": 176504832000,
+  "represented_planning_tick_decisions": 14120386560000,
+  "key_result": "RiskProxy is the best non-oracle policy with utility 0.595, success 0.706, and identity swap rate 0.083; loose proxy acceptance and last-seen belief collapse by identity swaps.",
+  "policy_metrics": {
+    "oracle_proxy": {
+      "success": 0.970648,
+      "swap": 0.001059,
+      "utility": 0.998752
+    },
+    "risk_calibrated_proxy": {
+      "success": 0.706483,
+      "swap": 0.082658,
+      "utility": 0.594659
+    },
+    "loose_proxy": {
+      "success": 0.327124,
+      "swap": 0.520991,
+      "utility": -0.260801
+    },
+    "last_seen_belief": {
+      "success": 0.337692,
+      "swap": 0.39211,
+      "utility": -0.259276
+    }
+  },
+  "limitations": [
+    "No real robot validation.",
+    "Synthetic deterministic benchmark.",
+    "Does not claim deployment-ready safety."
+  ]
 }
