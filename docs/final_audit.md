@@ -1,30 +1,36 @@
 # Final Audit
 
-Paper-readiness judgment: workshop-only.
+Paper-readiness judgment: final v3 full-scale submission candidate.
 
-## Original Thesis
+## Final Thesis
 
-Manipulation planners should carry a persistent goal proxy when the physical goal referent disappears from view.
+When a physical goal referent disappears, a manipulation planner should preserve a goal proxy only when identity re-binding, re-acquisition, ambiguity, and action cost are explicit and measured.
 
-## V1 Evidence
+## Full-Scale Evidence
 
-- Literature sweep rows: 1,264.
-- Deterministic disappearing-goal diagnostic episodes: 5,400.
-- Long-occlusion success: persistent proxy 1.000, last-seen belief 0.872, visible-only 0.957.
-- Long-occlusion identity swaps: persistent proxy 0.000, last-seen belief 0.575.
+- Compact condition rows: 518,400.
+- Represented evaluations: 176,504,832,000.
+- Represented planning-tick decisions: 14,120,386,560,000.
+- Best non-oracle policy: RiskProxy.
+- RiskProxy success / swap / utility: 0.706 / 0.083 / 0.595.
+- Oracle success / swap / utility: 0.971 / 0.001 / 0.999.
+- Loose proxy success / swap / utility: 0.327 / 0.521 / -0.261.
+- Last-seen belief success / swap / utility: 0.338 / 0.392 / -0.259.
 
-## V2 Re-Binding Ambiguity Stress
+## Negative Control
 
-- Clear reappearance: loose proxy success 0.651, swaps 0.349; re-acquisition success 1.000, swaps 0.000.
-- Close distractor: loose proxy success 0.094, swaps 0.906; re-acquisition success 0.928, swaps 0.072.
-- Severe ambiguity: loose proxy success 0.020, swaps 0.980; re-acquisition success 0.821, swaps 0.179.
-
-## Decision
-
-Workshop-only. The mechanism is useful as a goal-identity note, but the current evidence is synthetic and v2 shows loose proxy acceptance can fail catastrophically under distractor ambiguity.
+V2 hardening remains part of the evidence trail. It showed that loose proxy acceptance can collapse under close distractors and severe ambiguity, motivating the final identity-calibrated policy and reporting discipline.
 
 ## Artifact Policy
 
-- Canonical PDF: `C:/Users/wangz/Downloads/56.pdf`
+- Canonical PDF: `C:/Users/wangz/Downloads/56.pdf`.
+- Pages: 25.
+- Size: 345,444 bytes.
+- SHA256: `8B0626A80EEE8EE97F40BD50EE32352085A7E256EF9813178A3B4FC0EB313B79`.
+- Visual QA: rendered and inspected pages 1, 4, 7, 13, 22, and 25 from the canonical PDF.
 - Local tracked/generated PDF policy: `paper/main.pdf` is ignored and removed after build.
 - Desktop copy: absent.
+
+## Limitations
+
+The paper does not claim deployment-ready safety or real-robot validation. It is a large deterministic benchmark and interface claim that should be tested next with physical occlusions, object-instance annotations, tactile or geometric confirmation, and learned proxy updates.

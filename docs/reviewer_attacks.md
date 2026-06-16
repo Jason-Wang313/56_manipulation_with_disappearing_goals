@@ -2,16 +2,16 @@
 
 ## Attack: This is just partial observability.
 
-Partly sustained. The novelty is not POMDP state estimation; it is the planning-interface contract that carries goal identity, affordance, geometry, uncertainty, and re-binding rules.
+Partly sustained. The novelty is not POMDP state estimation; it is the action-facing proxy contract that exposes goal identity, affordance, geometry, uncertainty, re-binding, and re-acquisition.
 
 ## Attack: The original proxy gets clean re-binding for free.
 
-Sustained. V2 close-distractor stress shows loose proxy acceptance has 0.094 success and 0.906 swap rate.
+Sustained for v1 and answered in v3. V2 is retained as a negative control, and the final full-scale benchmark includes loose proxy acceptance, last-seen belief, visible-only control, identity gating, active search, re-acquisition, RiskProxy, and an oracle.
 
 ## Attack: Active re-acquisition is required.
 
-Sustained. Proxy with re-acquisition recovers 0.928 success under close distractors, but still has 0.179 swaps under severe ambiguity.
+Sustained. The paper now reports re-acquisition success, search, delay, waste, and safety exposure. Active search is strong but costly; RiskProxy is the best non-oracle utility tradeoff.
 
-## Attack: Synthetic toy evidence is not enough.
+## Attack: Synthetic evidence is not real robot evidence.
 
-Sustained. Decision: workshop-only.
+Sustained. The final manuscript states this limitation directly. The paper is a full-scale deterministic benchmark and interface contribution, not a deployment claim.

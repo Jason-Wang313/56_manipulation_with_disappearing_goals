@@ -1,0 +1,64 @@
+{
+  "task": {
+    "t00": "tabletop cup placement",
+    "t01": "shelf slot insertion",
+    "t02": "drawer interior placement",
+    "t03": "human handover target",
+    "t04": "bimanual covered assembly",
+    "t05": "tool alignment hidden fastener",
+    "t06": "cable aperture routing",
+    "t07": "bin picking target identity",
+    "t08": "mobile manipulation view loss",
+    "t09": "language referent clearing",
+    "t10": "regrasp hidden target frame",
+    "t11": "failed grasp original target"
+  },
+  "horizon": {
+    "h00": "short disappearance",
+    "h01": "medium disappearance",
+    "h02": "long decisive disappearance",
+    "h03": "delayed execution",
+    "h04": "intermittent receding horizon",
+    "h05": "mixed long horizon"
+  },
+  "occlusion": {
+    "o00": "robot self occlusion",
+    "o01": "carried object occlusion",
+    "o02": "environmental shelf occlusion",
+    "o03": "human occlusion",
+    "o04": "container interior disappearance",
+    "o05": "late full reappearance"
+  },
+  "ambiguity": {
+    "a00": "clear reappearance",
+    "a01": "close spatial distractor",
+    "a02": "appearance similar distractor",
+    "a03": "crossing trajectories",
+    "a04": "goal moves while hidden",
+    "a05": "adversarial false observation"
+  },
+  "observability": {
+    "r00": "passive vision only",
+    "r01": "active wrist camera",
+    "r02": "tactile geometric confirmation",
+    "r03": "semantic anchor",
+    "r04": "multimodal delayed confirmation"
+  },
+  "cost": {
+    "c00": "static cheap search",
+    "c01": "moving target moderate cost",
+    "c02": "moving distractor ambiguity",
+    "c03": "high action cost",
+    "c04": "human proximity safety critical"
+  },
+  "policy": {
+    "visible_only": "Visible-only controller",
+    "last_seen_belief": "Last-seen drifting belief",
+    "loose_proxy": "Loose proxy acceptance",
+    "identity_gate": "Identity-gated proxy",
+    "proxy_reacquisition": "Proxy with re-acquisition",
+    "active_search_proxy": "Active-search proxy",
+    "risk_calibrated_proxy": "Risk-calibrated identity proxy",
+    "oracle_proxy": "Oracle proxy"
+  }
+}
