@@ -26,9 +26,10 @@ V2 is preserved as a negative control. It showed that loose proxy acceptance can
 - Canonical PDF: `C:/Users/wangz/Downloads/56.pdf`.
 - Pages: 25.
 - Size: 345,444 bytes.
-- SHA256: `8B0626A80EEE8EE97F40BD50EE32352085A7E256EF9813178A3B4FC0EB313B79`.
-- Built at: 2026-06-16 12:51:23 +01:00.
-- Visual QA: rendered and inspected pages 1, 4, 7, 13, 22, and 25 from the Downloads PDF.
+- SHA256: `4138C7232114151209B675648266520DD03EC5FA4AC630FAE4BF77F25909A75A`.
+- Built at: 2026-06-19 23:09:49 +08:00.
+- Visual QA: rendered and inspected highlighted pages 3, 4, and 5 from the Downloads PDF.
+- Visual hardening: VLA-v4-style boxed links, with red internal-reference borders verified on all linked pages.
 - Local generated `paper/main.pdf`: removed after export.
 - Desktop PDF copy: absent.
 
