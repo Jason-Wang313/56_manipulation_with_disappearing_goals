@@ -2,7 +2,7 @@
 
 Status: final_v3_full_scale
 Attempt: 4
-Stage: final_submission_candidate
+Stage: final_submission_candidate_vla_highlights
 
 Current facts:
 - Full-scale compact condition rows: 518,400.
@@ -18,11 +18,13 @@ Current facts:
 - Canonical PDF target: `C:/Users/wangz/Downloads/56.pdf`.
 - Canonical PDF pages: 25.
 - Canonical PDF size: 345,444 bytes.
-- Canonical PDF SHA256: `8B0626A80EEE8EE97F40BD50EE32352085A7E256EF9813178A3B4FC0EB313B79`.
+- Canonical PDF SHA256: `4138C7232114151209B675648266520DD03EC5FA4AC630FAE4BF77F25909A75A`.
 - Local generated `paper/main.pdf` is removed after build.
 - Desktop PDF copy is absent.
+- VLA-style highlight metadata: 12 red internal-reference boxes and 12 total link annotations, all with `pdfborder={0 0 1}`.
+- Visual QA pages after rebuild: 3, 4, and 5.
 
 Decision:
 - Final v3 full-scale submission candidate. The contribution is a benchmark and reporting discipline for identity-calibrated goal proxies under disappearance, not a real-robot safety claim.
 
-End time: 2026-06-16 12:51:23 +01:00
+End time: 2026-06-19 23:09:49 +08:00
